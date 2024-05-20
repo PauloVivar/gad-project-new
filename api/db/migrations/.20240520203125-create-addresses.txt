@@ -32,19 +32,19 @@ module.exports = {
         type: Sequelize.DataTypes.STRING,
       },
       number: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DataTypes.INTEGER,
       },
       zipcode: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DataTypes.STRING,
       },
       geolocation:{
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DataTypes.STRING,
       },
       createdAt: {
-        field: 'created_at',
+        field: 'create_at',
         allowNull: false,
         type: Sequelize.DataTypes.DATE,
         defaultValue: Sequelize.NOW,

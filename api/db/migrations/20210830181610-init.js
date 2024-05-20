@@ -84,7 +84,7 @@ module.exports = {
         type: Sequelize.DataTypes.STRING,
       },
       createdAt: {
-        field: 'created_at',
+        field: 'create_at',
         allowNull: false,
         type: Sequelize.DataTypes.DATE,
         defaultValue: Sequelize.NOW,
