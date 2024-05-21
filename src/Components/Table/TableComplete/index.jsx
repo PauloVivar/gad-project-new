@@ -127,9 +127,9 @@ function TableComplete() {
                 </Button>
               </DropdownTrigger>
               <DropdownMenu>
-                <DropdownItem>View</DropdownItem>
-                <DropdownItem>Edit</DropdownItem>
-                <DropdownItem>Delete</DropdownItem>
+                <DropdownItem>Ver</DropdownItem>
+                <DropdownItem>Editar</DropdownItem>
+                <DropdownItem>Eliminar</DropdownItem>
               </DropdownMenu>
             </Dropdown>
           </div>

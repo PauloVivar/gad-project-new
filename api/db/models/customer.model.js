@@ -26,7 +26,7 @@ const CustomerSchema =  {
     type: DataTypes.STRING,
   },
   cc: {
-    allowNull: false,
+    allowNull: true,
     type: DataTypes.STRING,
   },
   birthdate: {

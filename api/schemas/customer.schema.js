@@ -22,11 +22,11 @@ const createCustomerSchema = Joi.object({
   name: name.required(),
   lastName: lastName.required(),
   ci: ci.required(),
-  cc: cc.required(),
   birthdate: birthdate.required(),
   gender: gender.required(),
   phone: phone.required(),
 
+  //cc: cc.required(),
   // user: Joi.object({
   //   email: email.required(),
   //   password: password.required()

@@ -1,15 +1,14 @@
 
 //import React from "react";
 import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure, Checkbox, Input, Link} from "@nextui-org/react";
-import {MailIcon} from './MailIcon.jsx';
-import {LockIcon} from './LockIcon.jsx';
+import { EnvelopeIcon, LockClosedIcon } from '@heroicons/react/24/solid'
 
-function ModalForm() {
+function ModalLogin() {
   const {isOpen, onOpen, onOpenChange} = useDisclosure();
 
   return (
     <>
-      <div className='pb-4'>ModalForm</div>
+      <div className='pb-4'>ModalLogin</div>
       <Button onPress={onOpen} color="primary">Create User</Button>
       <Modal 
         isOpen={isOpen} 
@@ -24,7 +23,7 @@ function ModalForm() {
                 <Input
                   autoFocus
                   endContent={
-                    <MailIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
+                    <EnvelopeIcon className="size-6 text-2xl text-default-400 pointer-events-none flex-shrink-0" />
                   }
                   label="Email"
                   placeholder="Enter your email"
@@ -32,7 +31,7 @@ function ModalForm() {
                 />
                 <Input
                   endContent={
-                    <LockIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
+                    <LockClosedIcon className="size-6 text-2xl text-default-400 pointer-events-none flex-shrink-0" />
                   }
                   label="Password"
                   placeholder="Enter your password"
@@ -68,4 +67,4 @@ function ModalForm() {
   );
 }
 
-export default ModalForm
+export default ModalLogin

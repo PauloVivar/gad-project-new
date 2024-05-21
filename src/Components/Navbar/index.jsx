@@ -9,8 +9,8 @@ import { MagnifyingGlassIcon, MoonIcon, UserIcon } from '@heroicons/react/24/sol
 const Navbar= ()=>{
 
   const context = useContext(GlobalContext)       //nos traemos el contexto
-  const activeStyle = 'underline underline-offset-4'
-
+  const activeStyle = 'text-black/70 underline underline-offset-4'
+  
   //Inicio Dark-Mode
   const [theme, setTheme] = useState( ()=>{
     if(window.matchMedia('(prefers-color-scheme: dark)').matches){
@@ -114,32 +114,39 @@ const Navbar= ()=>{
         <ul className='flex items-center gap-3'>
           <li className='font-bold text-lg pr-3'>
             <NavLink to={`${isUserSignOut ? '/sign-in' : '/'}`} >
-              Alcaldía Azogues
+              Alcald&iacute;a Azogues
             </NavLink>
           </li>
           <li>
             <NavLink
               to='/'
-              className={({ isActive }) => isActive ? activeStyle : undefined
-              }>
+              className={({ isActive }) => isActive ? activeStyle : undefined}
+            >
+              {({ isActive }) => (
                 <div className='flex gap-1 items-center'>
-                  <HomeModernIcon className='size-5 text-primary hover:cursor-pointer
-                    dark:text-white' />
+                    <HomeModernIcon className= {`size-5 hover:cursor-pointer
+                      ${ isActive ? 'text-black/70 underline underline-offset-4' : 
+                      'text-primary dark:text-gray-400' } `} /> 
                   Home
-                </div>  
-              </NavLink>
+                </div>
+              )}
+            </NavLink>
           </li>
           <li>
-            <a href='#recommendations'>Recomentados</a> 
+            <a href='/#recommendations' 
+              className='hover:text-black/70'>Recomentados</a>
           </li>
           <li>
-            <a href='#outstanding_news'>Resumen Noticias</a>
+            <a href='/#outstanding_news'
+              className='hover:text-black/70'>Resumen Noticias</a>
           </li>
           <li>
-            <a href='#faqs'>FAQS</a>
+            <a href='/#faqs'
+              className='hover:text-black/70'>FAQS</a>
           </li>
           <li>
-            <a href='#about_us'>Sobre Nosotros</a>
+            <a href='/#about_us'
+              className='hover:text-black/70'>Sobre Nosotros</a>
           </li>
           <li>
             <NavLink 
@@ -188,12 +195,18 @@ const Navbar= ()=>{
         id='tab_bar'>
         <ul className='flex space-x-8 items-center justify-center'>
           <li>
-            <NavLink
-              to='/'
-              className={({ isActive }) => isActive ? activeStyle : undefined
-              }>
+            <NavLink to='/'
+              className={({ isActive }) => isActive ? activeStyle : undefined}
+            >
               <HomeModernIcon className='size-5 text-primary hover:cursor-pointer
                 dark:text-gray-400' /> 
+
+              {/* {({ isActive }) => (
+                <HomeModernIcon className= {`size-5 hover:cursor-pointer
+                  ${ isActive ? activeStyle : 
+                  'text-primary dark:text-gray-400' } `} /> 
+              )} */}
+             
             </NavLink>
           </li>
           <li>

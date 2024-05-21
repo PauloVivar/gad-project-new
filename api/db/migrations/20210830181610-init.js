@@ -40,7 +40,7 @@ module.exports = {
         defaultValue: 'person',
       },
       avatar:{
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DataTypes.STRING,
       },
       status:{
@@ -112,7 +112,7 @@ module.exports = {
         type: Sequelize.DataTypes.STRING,
       },
       cc: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DataTypes.STRING,
       },
       birthdate: {

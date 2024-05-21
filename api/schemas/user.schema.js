@@ -13,7 +13,7 @@ const createUserSchema = Joi.object({
   password: password.required(),
   // role: role.required(),
   // team: team.required(),
-  avatar: avatar.required(),
+  //avatar: avatar.required(),
   //status: status.required(),
 });
 

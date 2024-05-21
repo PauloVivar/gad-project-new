@@ -29,7 +29,7 @@ const UserSchema = {
     defaultValue: 'person',
   },
   avatar:{
-    allowNull: false,
+    allowNull: true,
     type: DataTypes.STRING,
   },
   status:{
