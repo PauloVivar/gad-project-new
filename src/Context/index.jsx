@@ -55,8 +55,8 @@ export const GlobalProvider = ({ children }) =>{
 
     // fetch('https://fakestoreapi.com/users')
     fetch('https://api.escuelajs.co/api/v1/users')
-      .then(res_users => res_users.json())
-      .then(data_users => setUsers(data_users))
+      .then(response => response.json())
+      .then(data => setUsers(data))
   }, [])
 
   //users, setUsers

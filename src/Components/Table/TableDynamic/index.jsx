@@ -3,12 +3,11 @@
 import { useContext, useCallback } from 'react'
 import { GlobalContext } from '../../../Context'
 
-import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, User, Chip, Tooltip, getKeyValue} from "@nextui-org/react";
+import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, User, Chip, Tooltip} from "@nextui-org/react";
 
-import {EditIcon} from "./EditIcon";
-import {DeleteIcon} from "./DeleteIcon";
-import {EyeIcon} from "./EyeIcon";
 import {columns} from "./data";
+
+import { PencilSquareIcon, TrashIcon, EyeIcon } from '@heroicons/react/24/solid'
 
 const statusColorMap = {
   active: "success",
@@ -52,18 +51,18 @@ function TableDynamic() {
         return (
           <div className="relative flex items-center gap-2">
             <Tooltip content="Details">
-              <span className="text-lg text-default-400 cursor-pointer active:opacity-50">
+              <span className="size-4 text-lg text-default-400 cursor-pointer active:opacity-50">
                 <EyeIcon />
               </span>
             </Tooltip>
             <Tooltip content="Edit user">
-              <span className="text-lg text-green-400 cursor-pointer active:opacity-50">
-                <EditIcon />
+              <span className="size-4 text-lg text-green-400 cursor-pointer active:opacity-50">
+                <PencilSquareIcon />
               </span>
             </Tooltip>
             <Tooltip color="danger" content="Delete user">
-              <span className="text-lg text-danger cursor-pointer active:opacity-50">
-                <DeleteIcon />
+              <span className="size-4 text-lg text-danger cursor-pointer active:opacity-50">
+                <TrashIcon />
               </span>
             </Tooltip>
           </div>
