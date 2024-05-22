@@ -84,7 +84,7 @@ function ModalForm() {
                   placeholder='Ingrese su CI/RUC'
                   variant='bordered'
                 />
-                <DatePicker 
+                <DatePicker
                   label='Birth date' 
                   className='w-full'
                   variant='bordered'
